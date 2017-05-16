@@ -48,10 +48,10 @@ public class DefaultCommentGenerator implements CommentGenerator {
     /** The properties. */
     private Properties properties;
     
-    /** The suppress date. */
+    /** The suppress date.忽略时间参数 */
     private boolean suppressDate;
     
-    /** The suppress all comments. */
+    /** The suppress all comments. 忽略注释*/
     private boolean suppressAllComments;
 
     /** The addition of table remark's comments.
@@ -66,8 +66,8 @@ public class DefaultCommentGenerator implements CommentGenerator {
     public DefaultCommentGenerator() {
         super();
         properties = new Properties();
-        suppressDate = false;
-        suppressAllComments = false;
+        suppressDate = true; //默认忽略时间
+        suppressAllComments = true; //修改为默认忽略注释
         addRemarkComments = false;
     }
 

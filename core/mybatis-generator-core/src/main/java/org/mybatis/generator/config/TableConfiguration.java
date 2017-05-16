@@ -115,6 +115,8 @@ public class TableConfiguration extends PropertyHolder {
     
     private List<IgnoredColumnPattern> ignoredColumnPatterns = new ArrayList<IgnoredColumnPattern>();
 
+    
+    private String custom ; 
     /**
      * Instantiates a new table configuration.
      *
@@ -131,12 +133,12 @@ public class TableConfiguration extends PropertyHolder {
 
         insertStatementEnabled = true;
         selectByPrimaryKeyStatementEnabled = true;
-        selectByExampleStatementEnabled = true;
+        selectByExampleStatementEnabled = false;
         updateByPrimaryKeyStatementEnabled = true;
         deleteByPrimaryKeyStatementEnabled = true;
-        deleteByExampleStatementEnabled = true;
-        countByExampleStatementEnabled = true;
-        updateByExampleStatementEnabled = true;
+        deleteByExampleStatementEnabled = false;
+        countByExampleStatementEnabled = false;
+        updateByExampleStatementEnabled = false;
     }
 
     /**
@@ -905,4 +907,14 @@ public class TableConfiguration extends PropertyHolder {
     public void setSqlProviderName(String sqlProviderName) {
         this.sqlProviderName = sqlProviderName;
     }
+
+	public String getCustom() {
+		return custom;
+	}
+
+	public void setCustom(String custom) {
+		this.custom = custom;
+	}
+
+	
 }
